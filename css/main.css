@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
-* {
+
+/* * {
     font-family: 'Quicksand', sans-serif;
-}
+} */
 
 header {
     background-image: url('../img/header_background.jpg');
@@ -20,9 +21,10 @@ header {
 
 /* clases predefinidas */
 
-* {
+
+/* * {
     box-sizing: border-box;
-}
+} */
 
 body {
     margin: 0;
