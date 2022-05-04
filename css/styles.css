@@ -49,11 +49,6 @@ i {
 
 /* Diseño de columnas */
 
-.column-img {
-    width: 100%;
-    float: center;
-}
-
 .column-1 {
     width: 100%;
     float: left;
@@ -150,40 +145,7 @@ img {
 }
 
 
-/* form */
-
-.wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 20px;
-}
-
-#formContent {
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
-    background: #fff;
-    padding: 30px;
-    width: 90%;
-    max-width: 450px;
-    position: relative;
-    padding: 0px;
-    -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
-#formFooter {
-    background-color: #f6f6f6;
-    border-top: 1px solid #dce8f1;
-    padding: 25px;
-    text-align: center;
-    -webkit-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
-}
+/* Pagina Login */
 
 h2.inactive {
     color: #cccccc;
@@ -203,6 +165,77 @@ h2.active {
 
 #center {
     align-content: center;
+}
+
+
+/* Registartse 2 */
+
+.pagina2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: url(../img/nick-fewings-EkyuhD7uwSM-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor {
+    width: 100%;
+    padding: 15px;
+}
+
+.formulario {
+    background: white;
+    padding: 3px;
+    margin: auto;
+    margin-top: 100px;
+    width: 600px;
+}
+
+.h1 {
+    text-align: center;
+    color: Navy;
+    font-size: 40px;
+}
+
+.input-form {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+.input-contenedor {
+    margin-bottom: 15px;
+    border: 1px solid gray;
+}
+
+.botton {
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: Navy;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botton:hover {
+    background: blue;
+}
+
+.text {
+    text-align: center;
+    font-weight: 600;
+}
+
+.link {
+    text-decoration: none;
+    color: Navy;
+    font-weight: 600;
+}
+
+.link:hover {
+    color: blue;
 }
 
 
@@ -289,6 +322,12 @@ h2.active {
     }
     button {
         margin-bottom: 1%;
+    }
+    /* resposive del register */
+    .formulario {
+        margin: auto;
+        width: 300px;
+        margin-top: 85px;
     }
 }
 
