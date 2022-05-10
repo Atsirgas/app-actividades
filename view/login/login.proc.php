@@ -9,7 +9,7 @@ if (isset($_POST['login'])){
         $email = $_POST['email'];
         $pwd = sha1($_POST['password']);
         echo $pwd<
-      /  $result = mysqli_query($connection,"SELECT COUNT(1) AS 'usuarios' FROM usuarios WHERE correo_usu = '$email' AND password_usu = '$pwd'");
+        $result = mysqli_query($connection,"SELECT COUNT(1) AS 'usuarios' FROM usuarios WHERE correo_usu = '$email' AND password_usu = '$pwd'");
 
         session_start();
         $_SESSION['login']=false;
@@ -20,7 +20,7 @@ if (isset($_POST['login'])){
             echo "<script> window.location='../actividades.html'</script>";
         }else{  
             echo "<script>alert('Usuario incorrecto.');</script>";
-            echo "<script> window.location='../actividades.html'</script>";
+            echo "<script> window.location='./index .html'</script>";
         } 
     }
 }
