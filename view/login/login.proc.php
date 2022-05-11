@@ -7,7 +7,6 @@ if (isset($_POST['entrar'])){
             $email = $_POST['email'];
             $password = sha1($_POST['password']);
             $consulta = mysqli_query ($conn, "SELECT 'correo_usu' WHERE correo_usu = '$email' AND password_usu = '$password'");
-
     }
 }
 

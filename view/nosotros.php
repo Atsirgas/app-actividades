@@ -37,21 +37,20 @@
                     $hola=1;
                     session_start();
                     $_SESSION['usuario']=false;
-                    if ($_SESSION['usuario']=true) {
+                    if ($_SESSION['usuario']=false) {
                         echo '<form class="d-flex flex-row">
-                                <a href="./subir.actividad.html" class="btn btn-light form-control me-1" type="submit"><i
+                                <a href="./subir/subir.actividad.html" class="btn btn-light form-control me-1" type="submit"><i
                                 class="fa-solid fa-arrow-up-from-bracket"></i></a>
                                 </form>
                                 <form class="d-flex flex-row">
-                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
+                                <a href="./mis.actividades.html" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
                              </form>
                              <form class="d-flex flex-row">
-                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
+                                <a href="../index.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
                              </form>';
                      } else{
                          echo '<form class="d-flex flex-row">
-                         <a href="./login/index.html" class="btn btn-light form-control me-1" type="submit"><i
-                         class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                                <a href="./login/index.html" class="btn btn-light form-control me-1" type="submit"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
                                 <a href="./login/index.html" class="btn btn-light form-control ms-1" type="submit">Acceder</a>
                                 <a href="./registrarse/index.html" class="btn btn-light form-control ms-1" type="submit">registrarse</a>
                                 </form>';
