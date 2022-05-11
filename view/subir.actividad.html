@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -23,28 +25,23 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vh;">
                     <li class="nav-item">
-                        <a class="nav-link active disabled" aria-current="page" href="#">Sobre nosotros</a>
+                        <a class="nav-link" href="./nosotros.php">Sobre nosotros</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./actividades.html">Actividades</a>
+                        <a class="nav-link" href="./actividades.php">Actividades</a>
                     </li>
                 </ul>
                 <form class="d-flex flex-row">
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <button class="btn btn-light form-control me-1" type="submit"><i
-                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
-                   
-                    <?php 
-                    echo "<a href='./login/index.php' class='btn btn-light form-control ms-1' type='submit'>Acceder</a>";
-                    echo "<a href='./registrarse/index.php' class='btn btn-light form-control ms-1' type='submit'>registrarse</a>";
-                    ?>
-                </form> 
-                <form class="d-flex flex-row">
                     <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
-                </form> 
+                </form>
+                <form class="d-flex flex-row">
+                    <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
+                </form>
             </div>
         </div>
     </nav>
+
 </body>
+
 </html>

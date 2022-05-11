@@ -26,26 +26,37 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vh;">
                     <li class="nav-item">
-                        <a class="nav-link active disabled" aria-current="page" href="#">Actividades</a>
+                        <a class="nav-link" aria-current="page" href="./nosotros.php">Sobre nosotros</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./nosotros.php">Sobre nosotros</a>
+                        <a class="nav-link active disabled" href="#">Actividades</a>
                     </li>
                 </ul>
-                <form class="d-flex flex-row">
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <button class="btn btn-light form-control me-1" type="submit"><i
-                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
-
-                    <?php 
-                    echo "<a href='./login/index.php' class='btn btn-light form-control ms-1' type='submit'>Acceder</a>";
-                    echo "<a href='./registrarse/index.php' class='btn btn-light form-control ms-1' type='submit'>registrarse</a>";
+                <?php 
+                    $hola=1;
+                    session_start();
+                    $_SESSION['usuario']=false;
+                    if ($_SESSION['usuario']=true) {
+                        echo '<form class="d-flex flex-row">
+                                <a href="./subir.actividad.html" class="btn btn-light form-control me-1" type="submit"><i
+                                class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                                </form>
+                                <form class="d-flex flex-row">
+                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
+                             </form>
+                             <form class="d-flex flex-row">
+                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
+                             </form>';
+                     } else{
+                         echo '<form class="d-flex flex-row">
+                                <button class="btn btn-light form-control me-1" type="submit"><i
+                                class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Acceder</a>
+                                <a href="./registrarse/index.php" class="btn btn-light form-control ms-1" type="submit">registrarse</a>
+                                </form>';
+                     }
                     ?>
-                </form>
-                <form class="d-flex flex-row">
-                    <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
-                </form>
             </div>
         </div>
     </nav>
