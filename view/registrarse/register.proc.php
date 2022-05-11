@@ -1,6 +1,6 @@
 <?php
 session_start();  
-$_SESSION['usuario']=true;
+$_SESSION['login']='check';
 if (isset($_POST['registrarse'])) {
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];

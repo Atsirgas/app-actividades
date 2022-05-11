@@ -6,27 +6,19 @@ if (isset($_POST['entrar'])){
     if (isset($_POST['email']) && isset($_POST['password'])){
             $email = $_POST['email'];
             $password = sha1($_POST['password']);
-            $consulta = mysqli_query ($conn, "SELECT Count(1) WHERE 'correo_usu' = '$email' AND 'password_usu' = '$password'");
-
+            $consulta = mysqli_query ($conn, "SELECT * from usuarios WHERE correo_usu='$email' and password_usu='$password'");
+            $cont = mysqli_num_rows($consulta);
     }
 }
 
 session_start();
-$_SESSION['login']=false;
 
-// session_start();
-// if (!($_SESSION["enunciado1"]=='check')) {
-//     header("Location: ../index.html");
-// }
+if ($cont > 0) {
+    $_SESSION['login'] = true;
 
-if (mysqli_fetch_assoc ($consulta)['usuarios'] > 0) {
-    $_SESSION['login']=true;
-
-    echo "<script>alert('Bienvenido.');</script>"; 
     echo "<script> window.location='../actividades.php'</script>";
 } else {
-    echo "<script>alert('incorrecto.');</script>";
-    echo "<script> window.location='./index.php'</script>";
+    echo "<script> window.location='./index.html'</script>";
 }
 
 ?>
