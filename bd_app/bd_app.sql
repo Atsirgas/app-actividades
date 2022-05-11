@@ -1,5 +1,5 @@
 CREATE DATABASE `BD_APP`;
-USE `BD_APP`;
+USE `bd_app`;
 CREATE TABLE `usuarios`(
 id_usu int(3) NOT NULL PRIMARY KEY auto_increment,
 nom_usu varchar(20) NULL,

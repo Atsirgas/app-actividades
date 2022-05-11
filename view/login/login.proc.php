@@ -38,15 +38,20 @@ $conn = mysqli_connect('localhost', 'root', '', 'bd_app');
 
 // añadiría un limit 1 a la consulta pues solo esperamos un registro
 $consulta = mysqli_query ($conn, "SELECT * FROM usuarios WHERE correo_usu = '$email' AND password_usu = '$password'");  
+//SELECT * FROM usuarios WHERE correo_usu = 'javivi@gmail.com' AND password_usu = '9c0fcecf1cbad2f0fcb8'
 
 // esto válida si la consulta se ejecuto correctamente o no
 // pero en ningún caso válida si devolvió algún registro
-if(!$consulta){ 
-    echo "Usuario no existe " . $email . " " . $password. " o hubo un error "; 
-    echo mysqli_error($mysqli);
+if($consulta){ 
+    echo "<script>alert('Bienvenido.');</script>"; 
+    echo "<script> window.location='../actividades.html'</script>";
+    
     // si la consulta falla es bueno evitar que el código se siga ejecutando
     exit;
-} 
+} else {
+    echo "<script>alert('Bienvenido.');</script>";
+    echo "<script> window.location='./index.php'</script>";
+}
 // este else sobra
 //else { 
     //print "Bienvenido"; 
