@@ -1,5 +1,6 @@
 <?php
 session_start();  
+$_SESSION['usuario']=true;
 if (isset($_POST['registrarse'])) {
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
@@ -12,7 +13,7 @@ if (isset($_POST['registrarse'])) {
             $insert = mysqli_query($connection, $sql);
         }
 
- echo "<script> window.location='../actividades.html'</script>";
+ echo "<script> window.location='../actividades.php'</script>";
 
 
 //  sesionstart();

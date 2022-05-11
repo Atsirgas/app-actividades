@@ -36,7 +36,6 @@
                 <?php 
                     $hola=1;
                     session_start();
-                    $_SESSION['usuario']=false;
                     if ($_SESSION['usuario']=true) {
                         echo '<form class="d-flex flex-row">
                                 <a href="./subir.actividad.html" class="btn btn-light form-control me-1" type="submit"><i
