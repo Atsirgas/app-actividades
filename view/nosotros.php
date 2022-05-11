@@ -37,25 +37,24 @@
                     $hola=1;
                     session_start();
                     $_SESSION['usuario']=false;
-                    if ($_SESSION['usuario']=false) {
+                    if ($_SESSION['usuario']=true) {
                         echo '<form class="d-flex flex-row">
-                                <button class="btn btn-light form-control me-1" type="submit"><i
-                                class="fa-solid fa-arrow-up-from-bracket"></i></button>
-                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Acceder</a>
-                                <a href="./registrarse/index.php" class="btn btn-light form-control ms-1" type="submit">registrarse</a>
+                                <a href="./subir.actividad.html" class="btn btn-light form-control me-1" type="submit"><i
+                                class="fa-solid fa-arrow-up-from-bracket"></i></a>
                                 </form>
                                 <form class="d-flex flex-row">
                                 <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
+                             </form>
+                             <form class="d-flex flex-row">
+                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
                              </form>';
                      } else{
                          echo '<form class="d-flex flex-row">
-                                <button class="btn btn-light form-control me-1" type="submit"><i
-                                class="fa-solid fa-arrow-up-from-bracket"></i></button>
-                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Acceder</a>
-                                </form>
-                                <form class="d-flex flex-row">
-                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
-                             </form>';
+                         <a href="./login/index.html" class="btn btn-light form-control me-1" type="submit"><i
+                         class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                                <a href="./login/index.html" class="btn btn-light form-control ms-1" type="submit">Acceder</a>
+                                <a href="./registrarse/index.html" class="btn btn-light form-control ms-1" type="submit">registrarse</a>
+                                </form>';
                      }
                     ?>
             </div>

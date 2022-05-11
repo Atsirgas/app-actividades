@@ -12,7 +12,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e0b63cee0f.js" crossorigin="anonymous"></script>
     <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
 
 <body>
@@ -41,7 +41,18 @@
             </div>
         </div>
     </nav>
-
+    <div>
+        <form action="login_proc.php" method="post" class="formulario">
+            <h1 class="h1">subir imagen</h1>
+            <div class="contenedor ">
+                <input class="input-form center" type="file" name="email">
+                <div class="input-contenedor">
+                    <textarea class="input-form" name="texto" rows="3" cols="40" placeholder="Escriba algo"></textarea>
+                </div>
+                <input type="submit" name="subir" value="subir" class="botton">
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
