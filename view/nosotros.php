@@ -30,19 +30,27 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./actividades.html">Actividades</a>
+                        <a class="nav-link" href="./actividades.php">Actividades</a>
                     </li>
                 </ul>
-                <form class="d-flex flex-row">
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <button class="btn btn-light form-control me-1" type="submit"><i
-                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
-
                     <?php 
-                    echo "<a href='./login/index.php' class='btn btn-light form-control ms-1' type='submit'>Acceder</a>";
-                    echo "<a href='./registrarse/index.php' class='btn btn-light form-control ms-1' type='submit'>registrarse</a>";
+                    $hola=1;
+                    session_start();
+                    $_SESSION['usuario']=false;
+                    if ($_SESSION['usuario']=false) {
+                        echo '<form class="d-flex flex-row">
+                            <button class="btn btn-light form-control me-1" type="submit"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>';
+                        echo "<a href='./login/index.php' class='btn btn-light form-control ms-1' type='submit'>Acceder</a>
+                        </form>"; 
+                    } else { 
+                        echo '<form class="d-flex flex-row">
+                            <button class="btn btn-light form-control me-1" type="submit"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>';
+                        echo "<a href='./registrarse/index.php' class='btn btn-light form-control ms-1' type='submit'>registrarse</a> </form>";
+                    }
                     ?>
-                </form>
+                
                 <form class="d-flex flex-row">
                     <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
                 </form>
