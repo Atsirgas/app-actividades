@@ -18,15 +18,14 @@
 </head>
 
 <body class="index-body">
-
     <main>
         <h1>Disfruta de compartir 🚀</h1>
         <p><strong>#AppName</strong> es una plataforma donde profesoras y profesores de todo el mundo pueden compartir actividades, pasar el rato y aprender unos con otros; colaborando en proyectos y compartiendo ideas crearemos juntos el futuro de la educación</p>
 
         <a href="./view/nosotros.php" type="button" class="btn btn-success"><i class="fa-solid fa-chalkboard-user i"></i> sobre nosotros</a>
         <a href="./view/actividades.php" type="button" class="btn btn-warning"><i class="fa-solid fa-book-open-reader i"></i> actividades</a>
-        <a href="./view/registrarse/index.php" type="button" class="btn btn-light"><i class="fa fa-address-card i"></i> Nueva Cuenta</a>
-        <a href="./view/login/index.php" type="button" class="btn btn-light"><i class="fa-solid fa-right-to-bracket i"></i>acceder</a>
+        <a href="./view/registrarse/index.html" type="button" class="btn btn-primary"><i class="fa fa-address-card i"></i> Nueva Cuenta</a>
+        <a href="./view/login/index.html" type="button" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket i"></i>acceder</a>
     </main>
 </body>
 

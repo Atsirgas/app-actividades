@@ -129,6 +129,11 @@ main p {
 
 /* Otras clases */
 
+.linka {
+    text-decoration: none;
+    color: white;
+}
+
 .target {
     background-position: center;
     background-size: cover;

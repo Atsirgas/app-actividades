@@ -8,7 +8,7 @@
     <title>Actividades</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdeligggvr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e0b63cee0f.js" crossorigin="anonymous"></script>
     <!-- Hoja de estilos -->
@@ -26,26 +26,42 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vh;">
                     <li class="nav-item">
-                        <a class="nav-link" href="./nosotros.html">Sobre nosotros</a>
+                        <a class="nav-link" aria-current="page" href="./nosotros.php">Sobre nosotros</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active disabled" aria-current="page" href="./actividades.html">Actividades</a>
+                        <a class="nav-link active disabled" href="#">Actividades</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <button class="btn btn-light form-control me-1" type="submit">
-                        <i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-                </form>
-                <button class="btn btn-light form-sm ms-1">Mis actividades</button>
-                <form class="d-flex">
-                    <a class="nav-link" href="./login/index.php"><button class="btn btn-light form-sm ms-1">Acceder</button></a>
-                </form>
-
+                <?php 
+                    $hola=1;
+                    session_start();
+                    $_SESSION['usuario']=false;
+                    if ($_SESSION['usuario']=true) {
+                        echo '<form class="d-flex flex-row">
+                                <a href="./subir.actividad.html" class="btn btn-light form-control me-1" type="submit"><i
+                                class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                                </form>
+                                <form class="d-flex flex-row">
+                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
+                             </form>
+                             <form class="d-flex flex-row">
+                                <a href="./login/index.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
+                             </form>';
+                     } else{
+                         echo '<form class="d-flex flex-row">
+                         <a href="./login/index.html" class="btn btn-light form-control me-1" type="submit"><i
+                         class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                                <a href="./login/index.html" class="btn btn-light form-control ms-1" type="submit">Acceder</a>
+                                <a href="./registrarse/index.html" class="btn btn-light form-control ms-1" type="submit">registrarse</a>
+                                </form>';
+                     }
+                    ?>
             </div>
         </div>
     </nav>
     <!-- Top -->
+
     <div class="row-c padding-m ">
         <h4 class="column-1 padding-m ">Top 5</h4>
 
@@ -80,49 +96,50 @@
             <img src="../img/eva-gour-94mm2Txn12s-unsplash.jpg " alt=" " class="target ">
             <div style="float: right; " class="padding-m ">
                 <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-link "></i></button>
-                <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></button>
+                <a href="./login/index.html" class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></a>
             </div>
+            
         </div>
         <div class="column-3 padding-mobile ">
             <img src="../img/dan-cristian-padure-QQkQcaz7qmY-unsplash.jpg " alt=" " class="target ">
             <div style="float: right; " class="padding-m ">
                 <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-link "></i></button>
-                <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></button>
+                <a href="./login/index.html" class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></a>
             </div>
         </div>
         <div class="column-3 padding-mobile ">
             <img src="../img/etienne-girardet-j2Soo4TfFMk-unsplash.jpg " alt=" " class="target ">
             <div style="float: right; " class="padding-m ">
                 <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-link "></i></button>
-                <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></button>
+                <a href="./login/index.html" class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></a>
             </div>
         </div>
         <div class="column-3 padding-mobile ">
             <img src="../img/lucas-hoang-mwfBszKf5Xw-unsplash.jpg " alt=" " class="target ">
             <div style="float: right; " class="padding-m ">
                 <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-link "></i></button>
-                <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></button>
+                <a href="./login/index.html" class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></a>
             </div>
         </div>
         <div class="column-3 padding-mobile ">
             <img src="../img/mathilde-langevin-tbzSgZbEuz4-unsplash.jpg " alt=" " class="target ">
             <div style="float: right; " class="padding-m ">
                 <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-link "></i></button>
-                <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></button>
+                <a href="./login/index.html" class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></a>
             </div>
         </div>
         <div class="column-3 padding-mobile ">
             <img src="../img/nick-fewings-EkyuhD7uwSM-unsplash.jpg " alt=" " class="target ">
             <div style="float: right; " class="padding-m ">
                 <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-link "></i></button>
-                <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></button>
+                <a href="./login/index.html" class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></a>
             </div>
         </div>
         <div class="column-3 padding-mobile ">
             <img src="../img/susanna-marsiglia-Yjr6EafseQ8-unsplash.jpg " alt=" " class="target ">
             <div style="float: right; " class="padding-m ">
                 <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-link "></i></button>
-                <button class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></button>
+                <a href="./login/index.html" class="btn btn-light m-1 " type="submit "><i class="fa-solid fa-heart "></i></a>
             </div>
         </div>
     </div>
