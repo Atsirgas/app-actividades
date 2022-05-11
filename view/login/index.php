@@ -1,30 +1,3 @@
-<?php
-include "../../bd_app/bd.php";
-session_start();
-error_reporting(0);
-
-if(isset($_SESSION["username"])){
-    header("location: index.php")
-}
-
-
-if(isset($_POST['login'])){
-    $email=$_POST['email'];
-    $pwd=md5$_POST['password'];
-    
-    $sql="SELECT * FROM usuarios WHERE correo_usu='$email' AND password_usu='$pwd'";
-    $result=mysqli_query($conn, $sql);
-   
-    if($result->num_rows > 0){
-        $row=mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        header("location: ../actividades.html");
-    }else{
-        echo "<script>alert('La contraseña o el email son incorrectos')</script>";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,54 +1,3 @@
-<?php
-
-include "../../bd_app/bd.php";
-error_reporting(0);
-session_start();
-
-
-
-
-if(isset($_SESSION["nombre"])){
-
-    header("location:../../index.php");
-}
-
-if(isset($_POST["registrarse"])){
-    $username=$_POST["nombre"];
-    $email=$_POST["email"];
-    $pwd= md5($_POST["password"]);
-    $cpwd= md5($_POST["cpassword"]);
-        
-    
-    if($pwd==$cpwd){
-            $sql="SELECT * FROM usuarios WHERE correo_usu='$email'";
-            $result=mysqli_query($conn, $sql);
-             if(!$result->num_rows > 0){
-
-                 $sql="INSERT INTO bd_app (nom_usu,correo_usu,password_usu) VALUE ('$username','$email','$pwd',)";
-                 $result=mysqli_query($conn,$sql);
-                 
-                 if($result){
-                    echo "<script>alert('usuario registrado con éxito')</script>";
-                    $username="";
-                    $email="";
-                    $_POST["password"]="";
-                    $_POST["cpassword"]="";
-                 
-                } else{
-                    echo "<script>alert('Ocurrio un error')</script>";
-                 }
-
-            
-                }else{
-                echo "<script>alert('El correo ya existe')</script>";
-            }
-        }else{
-            echo "<script>alert('Las contraseñas no coinciden')</script>";
-        }
-}
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,7 +21,7 @@ if(isset($_POST["registrarse"])){
         <h1 class="h1">Registrate</h1>
         <div class="contenedor">
             <div class="input-contenedor">
-                <input name="nombre" class="input-form" type="text" placeholder="Nombre Completo">
+                <input name="nombre" class="input-form" type="text" placeholder="Nombre Completo" required>
             </div>
             <div class="input-contenedor">
                 <input name="email" class="input-form" type="email" placeholder="Correo Electronico">
@@ -85,7 +34,7 @@ if(isset($_POST["registrarse"])){
             </div>
             <input type="submit" value="Registrarse" name="registrarse" class="botton">
             <p class="text">¿Ya tienes cuenta?
-                <a class="link" href="../login/index.html">Iniciar Sesion</a>
+                <a class="link" href="../login/index.php">Iniciar Sesion</a>
             </p>
         </div>
     </form>
