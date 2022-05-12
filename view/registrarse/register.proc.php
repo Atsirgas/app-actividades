@@ -1,6 +1,8 @@
 <?php
+
+//creamos sesion login en true ya que siempre que entren aqui se creara el susuario y se ira directamente a actividades
 session_start();  
-$_SESSION['login']='check';
+$_SESSION['login']=true;
 if (isset($_POST['registrarse'])) {
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];

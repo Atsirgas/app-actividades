@@ -35,16 +35,19 @@
                     <a href="../mis.actividades.html" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
                 </form>
                 <form class="d-flex flex-row">
-                    <a href="../../index.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
+                    <a href="../destroy/destroy_to_login.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
                 </form>
             </div>
         </div>
     </nav>
     <div>
-        <form action="login_proc.php" method="post" class="formulario">
+        <form action="proc_img.php" method="post" class="formulario">
             <h1 class="h1">subir imagen</h1>
             <div class="contenedor ">
-                <input class="input-form center" type="file" name="email">
+                <input class="input-form center" type="file" name="foto">
+                <div class="input-contenedor inputContainer">
+                    <input class="input-form" type="text" name="titulo" placeholder="titulo">
+                </div>
                 <div class="input-contenedor">
                     <textarea class="input-form" name="texto" rows="3" cols="40" placeholder="Escriba algo"></textarea>
                 </div>

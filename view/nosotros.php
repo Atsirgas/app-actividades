@@ -43,8 +43,9 @@
                                 <form class="d-flex flex-row">
                                 <a href="./mis.actividades.html" class="btn btn-light form-control ms-1" type="submit">Mis actividades</a>
                              </form>
-                             <form class="d-flex flex-row">
-                                <a href="../index.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
+                             <form class="d-flex flex-row">'
+                            // destruimos la sesion con el boton de salir
+                                '<a href="./destroy/destroy_to_login.php" class="btn btn-light form-control ms-1" type="submit">salir</a>
                              </form>';
                      } else{
                          echo '<form class="d-flex flex-row">
